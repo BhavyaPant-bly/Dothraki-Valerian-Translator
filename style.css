@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+:root{
+    --primary-color:rgb(0, 162, 255);
+      --sec-color:#1F2937;
+  }
+  body{
+    font-family:'Pirata One',sans-serif;
+      margin: 0px;
+  }
+  .navigation{
+    background-color: var(--primary-color);
+    border: 2px solid var(--sec-color);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius:0.5rem;
+    padding:5rem 3rem;
+    /* font-style: italic; */
+    /* font-weight:20%; */
+    text-align:center;
+    font-size: 600%;
+    /* color:  */
+      /* outline: 0;   */
+     display: block; 
+  }
+  
+   .Translate {
+    font-family:'Pirata One';
+    font-weight: lighter;
+     padding:0.5rem 2rem;
+     font-size: 100%;
+     font-weight: bold;
+     background-color: var(--primary-color);
+     border-radius:0.5rem;
+     
+   }
+   .mainbody{
+      margin-left: 20%;
+   }
+  
+   .txt{
+    border-style:ridge;
+    height:150px;
+    width:60%;
+    padding:2rem;
+    border-radius: 0.5rem;
+    font-size:150%;
+   }
+   .space{
+    padding:3rem;
+  
+  }
+  footer{
+   border: 2px solid var(--sec-color);;
+   text-align: center ;
+   padding:8rem;
+   background-color:var(--primary-color);
+   font-size: 150%;
+  }
+  @media screen and (max-width:600px){
+    :root{
+      --primary-color:#f3db08;
+      /* rgb(228, 169, 8); */
+    }
+    .txt{
+      width:80%;
+      height:100px;
+      font-size:100%;
+    }
+    .navigation{
+      font-size: 300%;
+      padding:3rem 1.5rem;
+    }
+    .mainbody{
+      margin-left: 7%;
+   }
+   .space{
+    padding:1rem;
+  }
+  footer{
+    /* border: 2px solid black; */
+    text-align:center;
+    padding:4rem;
+    /* background-color:yellow; */
+    font-size:100%;
+  }
+   .Translate {
+    padding:0.2rem 1rem;
+    font-size: 70%;
+    background-color: var(--primary-color);
+    border-radius:0.5rem;
+    
+  }
+  
+  }
