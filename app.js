@@ -2,24 +2,28 @@
 // var welcome="this script works"+ username;
 // alert(welcome);
 var btnTranslatedoth=document.querySelector("#Translate1");
-var btnTranslateValerian=document.querySelector("#Translate2");
-// var btnTranslateIrish=document.querySelector("#Translate3");
+var btnTranslateValyrian=document.querySelector("#Translate2");
 var inpText=document.querySelector("#inputtext");
 var Outputtext=document.querySelector("#output");
 var urldoth="https://api.funtranslations.com/translate/dothraki.json";
-var urlvalerian="https://api.funtranslations.com/translate/valerian.json";
-// var urlIrish="https://api.funtranslations.com/translate/irish.json";
+var urlvalyrian="https://api.funtranslations.com/translate/valyrian.json";
 function CreateURL(text,url){
     return url+"?text="+text;
 }
-//make a function for catching errors
+
 function errormessage(error){
     alert("Server down!! Failed to translate :( !! Please try after some time!");
     console.log("error occured ",error);
 }
 
 function TranslatebyFetching(url){
-    // console.log("lala");
+    var Output=document.querySelector("body");
+
+    if(url===urldoth)
+    Output.style.backgroundImage="linear-gradient(rgba(254, 254, 254, 0.55), rgba(254, 254, 254, 0.55)),url(images/dothraki.jpg)";
+    else
+    Output.style.backgroundImage="linear-gradient(rgba(254, 254, 254, 0.55), rgba(254, 254, 254, 0.55)),url(images/valyrian.jpg)";
+    
     fetch(CreateURL(inpText.value,url))
     .then(response => response.json())
     .then(json => 
@@ -28,6 +32,5 @@ function TranslatebyFetching(url){
     .catch(errormessage);
 }
 
-btnTranslatedoth.addEventListener("click",function(){TranslatebyFetching(urldoth);},false);
-btnTranslateValerian.addEventListener("click", function(){TranslatebyFetching(urlvalerian);},false);
-// btnTranslateIrish.addEventListener("click", function(){TranslatebyFetching(urlIrish);},false);
+btnTranslatedoth.addEventListener("click",function(){TranslatebyFetching(urldoth);},true);
+btnTranslateValyrian.addEventListener("click", function(){TranslatebyFetching(urlvalyrian);},true);

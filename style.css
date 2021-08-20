@@ -1,22 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 :root{
-    --primary-color:rgb(0, 162, 255);
+    --primary-color:rgb(161, 78, 29);
       --sec-color:#1F2937;
   }
   body{
     font-family:'Pirata One',sans-serif;
       margin: 0px;
+      background-size: cover;
+      /* background-image: linear-gradient(
+      rgba(254, 254, 254, 0.77),
+      rgba(254, 254, 254, 0.77)
+    ), */
   }
   .navigation{
     background-color: var(--primary-color);
     border: 2px solid var(--sec-color);
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius:0.5rem;
-    padding:5rem 3rem;
+    padding:3rem 3rem;
     /* font-style: italic; */
     /* font-weight:20%; */
     text-align:center;
-    font-size: 600%;
+    font-size: 400%;
     /* color:  */
       /* outline: 0;   */
      display: block; 
@@ -43,6 +48,7 @@
     padding:2rem;
     border-radius: 0.5rem;
     font-size:150%;
+    background-color:transparent;
    }
    .space{
     padding:3rem;
@@ -51,9 +57,9 @@
   footer{
    border: 2px solid var(--sec-color);;
    text-align: center ;
-   padding:8rem;
+   padding:5rem;
    background-color:var(--primary-color);
-   font-size: 150%;
+   font-size: 90%;
   }
   @media screen and (max-width:600px){
     .txt{
